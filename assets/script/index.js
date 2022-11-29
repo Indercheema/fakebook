@@ -15,7 +15,7 @@ const showInfo = select('.info');
 const displayUser = select('.displayUser');
 const input = select('.text-area');
 const bigBox = select('.big-box');
-const uploadFile = select('.upload-icon');
+const uploadFile = select('.upload-file');
 const profileClick = select('.profile');
 const overlay = select('.overlay');
 const profileInfo = select('.profile-info');
@@ -25,7 +25,8 @@ const fileName = select('.file-name');
 const shapes = [];
 
 const user = new Subscriber(87456, 'Inder', 'Inder123',
-    'Inder.123@gmail.com', '3', '5', true);
+    'Inder.123@gmail.com', ['@BITCOIN', '@Winnipeg', '@New Zealand'],
+    ['Winnipeg helper', 'Web Developer', 'Movies'], true);
 
 onEvent('click', btn, function (event) {
     showInfo.innerText = '';
@@ -54,7 +55,6 @@ onEvent('click', btn, function (event) {
     if (input.value.trim() !== "") {
         newDiv.innerHTML += `<p class="para">${input.value}</p>`;
     }
-    onEvent('click' , uploadFile, function() {
         if (uploadFile.files.length > 0) {
             window.URL = window.URL || window.webkitURL;
             let file = uploadFile.files[0];
@@ -65,9 +65,8 @@ onEvent('click', btn, function (event) {
             img.src = url;
             input.vale = '';
             newDiv.appendChild(img);
+            newDiv.appendChild(date);
         }
-    })
-    
 
     bigBox.prepend(newDiv);
 });
@@ -81,16 +80,18 @@ onEvent('click', profileClick, function () {
             <div>
             <ul class = "ul-user">
                <li> Id: ${(user.id)}</li>
-               <li>${(user.name)}</li>
-               <li>${(user.userName)} </li>
-               <li>${(user.email)}</li>
-               <li>${(user.groups)}</li>
+               <li>Name: ${(user.name)}</li>
+               <li>User Name: ${(user.userName)} </li>
+               <li>User Email: ${(user.email)}</li>
+               <li>My Groups: ${(user.groups)}</li>
+               <li>My Pages: ${(user.pages)}</li>
+               <li>My Monetize: ${(user.canMonetize)}</li>
             </ul></div> 
         </div>   `;
 
 });
-onEvent('click', uploadFile, function() {
-    uploadFile.click();
+
+onEvent('onchange', uploadFile, function() {
     fileName.innerText = this.files[0].name.trim();
 });
 

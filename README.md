@@ -1,3 +1,3 @@
-## My Contacts
+## Fakebook
 
-[Check out here](https://indercheema.github.io/contact/)
+[Check out here](https://indercheema.github.io/fakebook/)
