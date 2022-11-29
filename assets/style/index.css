@@ -1,0 +1,342 @@
+@import "./reset.css";
+
+
+
+:root {
+    --app-dark-bg: #1a1d28;
+    --app-red: #ff3c57;
+    --app-green: #33ab4e;
+    --app-purple: #833cff;
+    --app-orange: #ff833c;
+    --app-blue: #3c57ff;
+    --app-blue-hover: #364ee6;
+   }
+
+/* -------------------------------*/
+/*Header                          */
+/* -------------------------------*/
+
+
+header {
+  min-width: 100%;
+  height: 56px;
+  background-color: #fff;
+  overflow: hidden;
+}
+
+.flexbox {
+  display: flex;
+}
+
+.title {
+  width: 40%;
+  height: 56%;
+}
+
+.title h1 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 56px;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+}
+
+nav {
+  width: 60%;
+  text-align: left;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li{
+  display: inline;
+  line-height: 56px;
+  cursor: default;
+}
+nav ul li a, .mobile-menu {
+  font-size: 18px;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 0.2px;
+  cursor: pointer;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+nav ul li + li {
+  margin-left: 18px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.btn-menu {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  line-height: 40px;
+  width: 140px;
+  border-radius: 50px;
+  border: 1px solid #3865FF;
+  background-color: #3865FF;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-menu:hover {
+  background-color: #0035e9;
+  transition: background-color 0.25s ease-in-out;
+  text-decoration: none;
+
+}
+
+.profile {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+/* -------------------------------*/
+/* Text Area                      */
+/* -------------------------------*/
+
+.area {
+  display: grid;
+  padding: 20px;
+  justify-content: center;
+  place-items: center;
+  text-align: center;
+}
+.area-content {
+  background-color: #1a1d28;
+  padding: 20px;
+}
+
+.text-area {
+background-color: #1a1d28;
+width: 600px;
+text-indent: 10px;
+color: #fff;
+resize: none;
+}
+
+textarea::placeholder {
+  padding: 10px;
+  font-size: 16px;
+  }
+
+  .post-header{
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.user {
+  color: #000;
+  margin-left: 10px;
+}
+
+.date {
+  color: #000;
+  /* text-align: right; */
+  top: 20px;
+  right: 20px;
+  position: absolute;
+}
+
+.uploaded-pic {
+  width: 500px;
+  height: 400px;
+  padding: 10px;
+  border-radius: 6px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.profile-2 {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  padding: 2px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.profile-info > .div-content {
+  top: 1px;
+  right: 1px;
+  left: 1px;
+}
+
+.ul-user {
+  list-style: none;
+}
+
+.upload-file {
+  display: none;
+}
+
+.upload-icon {
+  cursor: pointer;
+}
+
+
+
+
+/* -------------------------------*/
+/* Main                           */
+/* -------------------------------*/
+   
+.container {
+  width: min(100% - 30px, 1380px);
+  margin-inline: auto;
+}
+
+   body {
+    background-color: #000;
+    height: calc(100vh - 20px);
+   }
+
+   h2 , form ,p{
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+   }
+
+.center {
+    /* margin-top: 50px; */
+    display: grid;
+    padding: 20px;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+
+}
+
+.para{
+  color: #000;
+  font-size: 12px;
+  text-align: left;
+}
+
+.big-box {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(300px, 1fr));
+  gap: 1rem;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+
+
+.square {
+  position: relative;
+  text-align: left;
+  width: 600px;
+  color: #fff;
+  padding: 10px 15px;
+  border: 1px solid rgba(100, 218, 96, 0.9);
+  animation: animate .3s ease-in-out;
+  cursor: pointer;
+}
+
+
+.btn , .btn2 {
+  margin-top: 30px;
+  font-size: 15px;
+  display: inline-block;
+  list-style: none;
+  text-align: center;
+  line-height: 40px;
+  width: 140px;
+  border-radius: 10px;
+  border: 1px solid --app-green;
+  background-color: var(--app-green);
+  color: #fff;
+  cursor: pointer;
+}
+.btn2 {
+  position: fixed;
+  width: 200px;
+  bottom: 20px;
+  right: 20px;
+}
+
+
+.btn:hover {
+  background-color: #0035e9;
+  transition: background-color 0.1s ease-in-out;
+}
+
+input[type="text"] {
+  width: 400px;
+  /* padding: 20px; */
+  line-height: 40px;
+  border: 1px solid #a9a9a9 ;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #000;
+  text-align: left;
+  text-indent: 10px;
+  background-color: #1a1d28;
+  background-size: 15px;
+  transition: border-color 0.25s ease-in-out;
+}
+
+input[type="text"]:focus {
+  border: 1px solid rgba(0, 0, 0, 0.9);
+}
+
+
+button {
+  margin-left: 20px;
+}
+
+.overlay {
+  width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.profile-info {
+  width: 300px;
+  height: 500px;
+  color: #000;
+  background-color: #fff;
+}
+
+.displayUser {
+  color: #000;
+}
+
+@keyframes animate {
+  from {
+      opacity: 0;
+      transform: translateY(12px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+
+
