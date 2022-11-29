@@ -52,6 +52,7 @@ onEvent('click', btn, function (event) {
     newDiv.classList.add('square');
     newDiv.style.backgroundColor = "#fff";
     shapes.push(newDiv);
+    newDiv.appendChild(date);
     if (input.value.trim() !== "") {
         newDiv.innerHTML += `<p class="para">${input.value}</p>`;
     }
